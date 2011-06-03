@@ -1,1 +1,26 @@
-This file was created by PyCharm 1.2 for binding GitHub repository
+django_subclass
+
+If a subclass S1 of the base class B is created:
+    django_subclass allow to perform B.objects.all() and to retrieve object of type S1
+
+If a proxy P1 of the base class B is created:
+    django_subclass allow to perform B.object.get() retrieve an object of type S1
+
+Usage:
+
+    1 - Add the django_subclass folder to your PYTHON_PATH and installed_apps
+    2 - Register your model:
+        site.register(SubClassA)
+
+    3 - That's it
+
+    
+    Before :
+        >>> A = SubClassA(key=1)
+        >>> BaseClass.objects.get(key=1).__class__
+        <class 'test_app.models.BaseClass'>
+
+    After :
+        >>> A = SubClassA(key=1)
+        >>> BaseClass.objects.get(key=1).__class__
+        <class 'test_app.models.SubClassA'>
