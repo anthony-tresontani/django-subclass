@@ -8,6 +8,7 @@ Replace this with more appropriate tests for your application.
 from django.test import TestCase
 from django_subclass.models import RealClass, SubclassMapper
 from django_subclass.site import Register
+from django.db import models
 from test_app.models import BaseClass, SubClassA, SubClassB, SubClassC, OtherSubClassA, OtherClass
 from django_subclass import site
 
